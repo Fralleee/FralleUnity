@@ -7,8 +7,8 @@
     <ProjectGuid>{2A96EAC4-D26B-4AC5-B698-44CB72DAB8CD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ability</RootNamespace>
-    <AssemblyName>Ability</AssemblyName>
+    <RootNamespace>Battle</RootNamespace>
+    <AssemblyName>Battle</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
