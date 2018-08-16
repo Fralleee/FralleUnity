@@ -7,14 +7,10 @@ public class Target
   public Vector3 position;
   public string name;
   public float Width = 0.5f;
-
-  public static implicit operator bool(Target target) {
-    return target != null && target.gameObject != null;
-  }
+  public static implicit operator bool(Target target) { return target != null && target.gameObject != null; }
   public static implicit operator Transform(Target target) { return target ? target.transform : null; }
   public static implicit operator GameObject(Target target) { return target ? target.gameObject : null; }
   public override string ToString() { return string.IsNullOrEmpty(name) ? name : null; }
-
 
   public Target(Transform t)
   {

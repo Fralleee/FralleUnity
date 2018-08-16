@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28010.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{844B9809-D355-469C-9EDD-B31BB161CB50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ability", "Ability\Ability.csproj", "{2A96EAC4-D26B-4AC5-B698-44CB72DAB8CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Battle", "Ability\Battle.csproj", "{2A96EAC4-D26B-4AC5-B698-44CB72DAB8CD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blocker", "Blocker\Blocker.csproj", "{D5E40FC8-E5BB-47FB-9903-530EE2089BB2}"
 EndProject

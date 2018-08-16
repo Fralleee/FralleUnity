@@ -8,11 +8,7 @@ public class TargetAbility : Ability
   public TargetReceiver targetReceiver = TargetReceiver.TARGET;
   [HideInInspector] public float aoeRadius = 1; // Only applicable if targetlocation
   [HideInInspector] public GameObject locationEffect; // Only applicable if targetlocation
-
-  void OnEnable()
-  {
-    CastAnimation = CastAnimations.AimedTrigger;  
-  }
+  void OnEnable() { CastAnimation = CastAnimations.AimedTrigger; }
   public override void Setup(GameObject caster) { base.Setup(caster); }
   public override void Cast(GameObject target)
   {

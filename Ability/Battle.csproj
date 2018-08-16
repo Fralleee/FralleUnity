@@ -43,11 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\Ability.cs" />
-    <Compile Include="Base\AbilityCaster.cs" />
     <Compile Include="Base\AbilityEffect.cs" />
-    <Compile Include="Base\AbilityTargeter.cs" />
+    <Compile Include="Base\Attributes.cs" />
+    <Compile Include="Base\DamageController.cs" />
     <Compile Include="Base\Target.cs" />
-    <Compile Include="Base\TargetScanner.cs" />
     <Compile Include="Derived\Effects\DamageEffect.cs" />
     <Compile Include="Derived\Projectile.cs" />
     <Compile Include="Derived\Types\Editor\TargetAbilityEditor.cs" />
@@ -57,7 +56,6 @@
     <Compile Include="Enums\TargetPriority.cs" />
     <Compile Include="Enums\TargetReceiver.cs" />
     <Compile Include="Enums\TargetType.cs" />
-    <Compile Include="Interfaces\ITargeter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
