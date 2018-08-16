@@ -2,13 +2,13 @@
 using System;
 
 [CreateAssetMenu(menuName = "Abilities/Target")]
-public class TargetAbility : Ability
+public class TargetAbility : AIAbility
 {
   [Header("Target Ability Specific")]
   public TargetReceiver targetReceiver = TargetReceiver.TARGET;
   [HideInInspector] public float aoeRadius = 1; // Only applicable if targetlocation
   [HideInInspector] public GameObject locationEffect; // Only applicable if targetlocation
-  void OnEnable() { CastAnimation = CastAnimations.AimedTrigger; }
+  void OnEnable() { castAnimation = CastAnimations.AimedTrigger; }
   public override void Setup(GameObject caster) { base.Setup(caster); }
   public override void Cast(GameObject target)
   {

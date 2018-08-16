@@ -31,6 +31,7 @@ public class MatchEditorCamera : MonoBehaviour
   void Start()
   {
     myCamera = this.GetComponent<Camera>();
+    if (targetFov <= 0) Debug.LogWarning("targetFov error");
 
     //#if UNITY_EDITOR
 

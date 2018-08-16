@@ -42,8 +42,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base\Ability.cs" />
-    <Compile Include="Base\AbilityEffect.cs" />
+    <Compile Include="Ability\Ability.cs" />
+    <Compile Include="Ability\AbilityEffect.cs" />
+    <Compile Include="Ability\AIAbility.cs" />
     <Compile Include="Base\Attributes.cs" />
     <Compile Include="Base\DamageController.cs" />
     <Compile Include="Base\Target.cs" />
@@ -59,6 +60,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Blocker\Blocker.csproj">
+      <Project>{d5e40fc8-e5bb-47fb-9903-530ee2089bb2}</Project>
+      <Name>Blocker</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Core\Core.csproj">
       <Project>{844b9809-d355-469c-9edd-b31bb161cb50}</Project>
       <Name>Core</Name>
