@@ -3,9 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FralleUnity", "FralleUnity.csproj", "{574A5FE9-0BCC-4794-AEF5-763446E9F0DD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{844B9809-D355-469C-9EDD-B31BB161CB50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ability", "Ability\Ability.csproj", "{2A96EAC4-D26B-4AC5-B698-44CB72DAB8CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blocker", "Blocker\Blocker.csproj", "{D5E40FC8-E5BB-47FB-9903-530EE2089BB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventSystem", "EventSystem\EventSystem.csproj", "{43DD5EC0-206C-4AC2-B1E3-C34214D941F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameManagement", "GameManagement\GameManagement.csproj", "{300E149B-BD5B-470A-84D7-3D3C2D4721DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluggableFSM", "PluggableFSM\PluggableFSM.csproj", "{E27193D5-877D-4D05-88E6-DA36D4F826C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +21,30 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{574A5FE9-0BCC-4794-AEF5-763446E9F0DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{574A5FE9-0BCC-4794-AEF5-763446E9F0DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{574A5FE9-0BCC-4794-AEF5-763446E9F0DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{574A5FE9-0BCC-4794-AEF5-763446E9F0DD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{844B9809-D355-469C-9EDD-B31BB161CB50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{844B9809-D355-469C-9EDD-B31BB161CB50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{844B9809-D355-469C-9EDD-B31BB161CB50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{844B9809-D355-469C-9EDD-B31BB161CB50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A96EAC4-D26B-4AC5-B698-44CB72DAB8CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A96EAC4-D26B-4AC5-B698-44CB72DAB8CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A96EAC4-D26B-4AC5-B698-44CB72DAB8CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A96EAC4-D26B-4AC5-B698-44CB72DAB8CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5E40FC8-E5BB-47FB-9903-530EE2089BB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5E40FC8-E5BB-47FB-9903-530EE2089BB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5E40FC8-E5BB-47FB-9903-530EE2089BB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5E40FC8-E5BB-47FB-9903-530EE2089BB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43DD5EC0-206C-4AC2-B1E3-C34214D941F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43DD5EC0-206C-4AC2-B1E3-C34214D941F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43DD5EC0-206C-4AC2-B1E3-C34214D941F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43DD5EC0-206C-4AC2-B1E3-C34214D941F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{300E149B-BD5B-470A-84D7-3D3C2D4721DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{300E149B-BD5B-470A-84D7-3D3C2D4721DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{300E149B-BD5B-470A-84D7-3D3C2D4721DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{300E149B-BD5B-470A-84D7-3D3C2D4721DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E27193D5-877D-4D05-88E6-DA36D4F826C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E27193D5-877D-4D05-88E6-DA36D4F826C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E27193D5-877D-4D05-88E6-DA36D4F826C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E27193D5-877D-4D05-88E6-DA36D4F826C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
