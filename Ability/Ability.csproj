@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>2a96eac4-d26b-4ac5-b698-44cb72dab8cd</ProjectGuid>
+    <ProjectGuid>{2A96EAC4-D26B-4AC5-B698-44CB72DAB8CD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Ability</RootNamespace>
@@ -31,20 +31,40 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEditor">
+      <HintPath>..\..\..\..\..\..\Program Files\Unity\Editor\Data\Managed\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\..\..\Program Files\Unity\Editor\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Base\Ability.cs" />
+    <Compile Include="Base\AbilityCaster.cs" />
+    <Compile Include="Base\AbilityEffect.cs" />
+    <Compile Include="Base\AbilityTargeter.cs" />
+    <Compile Include="Base\Target.cs" />
+    <Compile Include="Base\TargetScanner.cs" />
+    <Compile Include="Derived\Effects\DamageEffect.cs" />
+    <Compile Include="Derived\Projectile.cs" />
+    <Compile Include="Derived\Types\Editor\TargetAbilityEditor.cs" />
+    <Compile Include="Derived\Types\ProjectileAbility.cs" />
+    <Compile Include="Derived\Types\TargetAbility.cs" />
+    <Compile Include="Enums\CastAnimations.cs" />
+    <Compile Include="Enums\TargetPriority.cs" />
+    <Compile Include="Enums\TargetReceiver.cs" />
+    <Compile Include="Enums\TargetType.cs" />
+    <Compile Include="Interfaces\ITargeter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{844b9809-d355-469c-9edd-b31bb161cb50}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>
