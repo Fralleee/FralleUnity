@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Fralle;
 using UnityEngine;
 
 //Waiting

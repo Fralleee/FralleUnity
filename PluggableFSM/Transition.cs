@@ -1,9 +1,12 @@
 ﻿using System;
 
-[Serializable]
-public class Transition
+namespace Fralle
 {
-  public Decision decision;
-  public State trueState;
-  public State falseState;
+  [Serializable]
+  public class Transition
+  {
+    public Decision decision;
+    public State trueState;
+    public State falseState;
+  }
 }

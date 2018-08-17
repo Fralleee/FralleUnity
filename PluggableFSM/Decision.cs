@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 
-public abstract class Decision : ScriptableObject
+namespace Fralle
 {
-  public abstract bool Decide(IStateController controller);
+  public abstract class Decision : ScriptableObject
+  {
+    public abstract bool Decide(IStateController controller);
+  }
 }

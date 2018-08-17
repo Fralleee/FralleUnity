@@ -2,36 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "PluggableFSM/State")]
-public class State : ScriptableObject
+namespace Fralle
 {
-  public Action[] actions;
-  public Transition[] transitions;
-  public Color sceneGizmoColor = Color.grey;
-
-  public void UpdateState(IStateController controller)
+  [CreateAssetMenu(menuName = "PluggableFSM/State")]
+  public class State : ScriptableObject
   {
-    DoActions(controller);
-    CheckTransitions(controller);
-  }
+    public Action[] actions;
+    public Transition[] transitions;
+    public Color sceneGizmoColor = Color.grey;
 
-  void DoActions(IStateController controller)
-  {
-    for (int i = 0; i < actions.Length; i++)
+    public void UpdateState(IStateController controller)
     {
-      actions[i].Act(controller);
+      DoActions(controller);
+      CheckTransitions(controller);
+    }
+
+    void DoActions(IStateController controller)
+    {
+      for (int i = 0; i < actions.Length; i++)
+      {
+        actions[i].Act(controller);
+      }
+    }
+
+    void CheckTransitions(IStateController controller)
+    {
+      for (int i = 0; i < transitions.Length; i++)
+      {
+        bool decisionSucceeded = transitions[i].decision.Decide(controller);
+        if (decisionSucceeded) controller.TransitionToState(transitions[i].trueState);
+        else controller.TransitionToState(transitions[i].falseState);
+      }
     }
   }
-
-  void CheckTransitions(IStateController controller)
-  {
-    for (int i = 0; i < transitions.Length; i++)
-    {
-      bool decisionSucceeded = transitions[i].decision.Decide(controller);
-      if (decisionSucceeded) controller.TransitionToState(transitions[i].trueState);
-      else controller.TransitionToState(transitions[i].falseState);
-    }
-  }
-
-
 }

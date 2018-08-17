@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Action : ScriptableObject
+namespace Fralle
 {
-  public abstract void Act(IStateController controller);
+  public abstract class Action : ScriptableObject
+  {
+    public abstract void Act(IStateController controller);
+  }
 }

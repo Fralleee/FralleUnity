@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IStateController
+namespace Fralle
 {
-  void TransitionToState(State nextState);
+  public interface IStateController
+  {
+    void TransitionToState(State nextState);
+  }
 }
