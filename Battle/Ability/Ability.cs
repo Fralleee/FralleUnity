@@ -3,8 +3,8 @@ using UnityEngine;
 
 public abstract class Ability : ScriptableObject
 {
-  [SerializeField] Blocker windupBlocker;
-  [SerializeField] Blocker recoveryBlocker;
+  public Blocker windupBlocker;
+  public Blocker recoveryBlocker;
 
   [Header("Settings")]
   public string abilityName = "Ability name";
