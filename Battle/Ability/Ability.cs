@@ -16,7 +16,8 @@ public abstract class Ability : ScriptableObject
   [Space(10)]
 
   [Header("Visuals")]
-  public CastAnimations castAnimation = CastAnimations.DirectTrigger;
+  public WindupAnimation windupAnimation = WindupAnimation.Spell;
+  public CastAnimation castAnimation = CastAnimation.Direct;
   public ParticleSystem windupEffect;
   public ParticleSystem castingEffect;
 

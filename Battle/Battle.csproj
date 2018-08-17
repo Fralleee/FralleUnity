@@ -53,7 +53,8 @@
     <Compile Include="Derived\Types\Editor\TargetAbilityEditor.cs" />
     <Compile Include="Derived\Types\ProjectileAbility.cs" />
     <Compile Include="Derived\Types\TargetAbility.cs" />
-    <Compile Include="Enums\CastAnimations.cs" />
+    <Compile Include="Enums\CastAnimation.cs" />
+    <Compile Include="Enums\WindupAnimation.cs" />
     <Compile Include="Enums\TargetPriority.cs" />
     <Compile Include="Enums\TargetReceiver.cs" />
     <Compile Include="Enums\TargetType.cs" />
