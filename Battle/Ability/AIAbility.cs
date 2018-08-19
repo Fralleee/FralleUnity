@@ -11,9 +11,9 @@ public abstract class AIAbility : Ability
   [HideInInspector] public float lastLoSCheck = 0;
   [HideInInspector] public float losScanRate = 0.25f;
 
-  public override void Setup(GameObject caster)
+  public override void Setup(GameObject casterGo, int targetLayerParam)
   {
-    base.Setup(caster);
+    base.Setup(casterGo, targetLayerParam);
     lastLoSCheck = 0;
     lastTargetScan = 0;
   }

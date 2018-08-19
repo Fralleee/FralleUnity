@@ -9,7 +9,6 @@ public class DamageController : MonoBehaviour
   [HideInInspector] public float Health;
   [HideInInspector] public float MaxHealth;
   float damageReduction;
-  public float width;
   public float PercentageHealth { get { return Health / MaxHealth; } }
 
   void Awake()

@@ -13,9 +13,13 @@ public class DamageEffect : AbilityEffect
   {
     base.Affect(ability, target);
     DamageController damageController = target.GetComponent<DamageController>();
-    System.Random rnd = new System.Random();
-    int amount = rnd.Next(minAmount, maxAmount);
-    damageController.TakeDamage(amount, ability.caster, ability.abilityName);
+    if (damageController)
+    {
+      System.Random rnd = new System.Random();
+      int amount = rnd.Next(minAmount, maxAmount);
+      damageController.TakeDamage(amount, ability.caster, ability.abilityName);
+    }
+    else Debug.LogWarning("Target is missing DamageController: " + target.name);
 
   }
 }

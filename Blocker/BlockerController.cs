@@ -6,8 +6,8 @@ public class BlockerController : MonoBehaviour
 {
   public BlockerList blockerList;
   void Awake() { if (blockerList == null) { blockerList = ScriptableObject.CreateInstance<BlockerList>(); } }
-  public void AddBlocker(Blocker blocker) { blockerList.blockers.AddIfUnique(blocker); }
-  public void RemoveBlocker(Blocker blocker) { blockerList.blockers.RemoveIfExists(blocker); }
+  public void AddBlocker(Blocker blocker) { if(blocker) blockerList.blockers.AddIfUnique(blocker); }
+  public void RemoveBlocker(Blocker blocker) { if(blocker) blockerList.blockers.RemoveIfExists(blocker); }
   public bool ContainsBlocker(bool? physics = null, bool? camera = null, bool? movement = null, bool? abilities = null, bool? production = null)
   {
     return blockerList.blockers.Any(x =>

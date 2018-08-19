@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System;
+using System.Linq;
 
 [CreateAssetMenu(menuName = "Abilities/Target")]
 public class TargetAbility : AIAbility
@@ -7,9 +8,9 @@ public class TargetAbility : AIAbility
   [Header("Target Ability Specific")]
   public TargetReceiver targetReceiver = TargetReceiver.TARGET;
   [HideInInspector] public float aoeRadius = 1; // Only applicable if targetlocation
-  [HideInInspector] public GameObject locationEffect; // Only applicable if targetlocation
-  void OnEnable() { castAnimation = CastAnimation.Aimed; }
-  public override void Setup(GameObject caster) { base.Setup(caster); }
+  [HideInInspector] public ParticleSystem locationEffect; // Only applicable if targetlocation
+  public override void Setup(GameObject casterGo, int targetLayerParam) { base.Setup(casterGo, targetLayerParam); }
+
   public override void Cast(GameObject target)
   {
     base.Cast(target);
@@ -19,8 +20,8 @@ public class TargetAbility : AIAbility
         TargetCast(target);
         break;
       case TargetReceiver.LOCATION:
-        throw new NotImplementedException();
-      //LocationCast(target.transform.position);
+        LocationCast(target.transform.position);
+        break;
       default:
         TargetCast(target);
         break;
@@ -31,6 +32,26 @@ public class TargetAbility : AIAbility
     foreach (AbilityEffect effect in effects)
     {
       effect.Affect(this, target);
+    }
+  }
+
+  void LocationCast(Vector3 position)
+  {
+    Debug.DrawRay(caster.transform.position, position, Color.blue, 1f);
+    Collider[] colliders = Physics.OverlapSphere(position, aoeRadius, targetLayer);
+    colliders = colliders.Where(x => x.GetComponent<DamageController>()).ToArray();
+    foreach (Collider col in colliders)
+    {
+      foreach (AbilityEffect effect in effects)
+      {
+        effect.Affect(this, col.gameObject);
+      }
+    }
+    if (locationEffect)
+    {
+      ParticleSystem effect = Instantiate(locationEffect, position, Quaternion.identity);
+      effect.Play();
+      Destroy(effect.gameObject, effect.main.startLifetime.constant);
     }
   }
 }

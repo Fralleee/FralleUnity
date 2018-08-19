@@ -15,7 +15,7 @@ public class TargetAbilityEditor : Editor
       if (group.visible)
       {
         targetAbility.aoeRadius = EditorGUILayout.FloatField("AOE Radius", targetAbility.aoeRadius);
-        targetAbility.locationEffect = (GameObject)EditorGUILayout.ObjectField("Location Effect", targetAbility.locationEffect, typeof(GameObject), true);
+        targetAbility.locationEffect = (ParticleSystem)EditorGUILayout.ObjectField("Location Effect", targetAbility.locationEffect, typeof(ParticleSystem), true);
       }
     }
 
