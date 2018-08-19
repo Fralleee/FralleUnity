@@ -16,17 +16,15 @@ public abstract class Ability : ScriptableObject
   [Space(10)]
 
   [Header("Visuals")]
-  public WindupAnimation windupAnimation;
-  public CastAnimation castAnimation;
+  public WindupAnimation windupAnimation;  
   public ParticleSystem windupEffect;
-  public ParticleSystem castingEffect;
-
-  protected int targetLayer;
-
+  [HideInInspector] public CastAnimation castAnimation; // Only applicable if windupAnimation.Spell
+  [HideInInspector] public ParticleSystem castingEffect; // Only applicable if windupAnimation.Spell
 
   [HideInInspector] public float lastAction = 0;
   public GameObject caster { get; set; }
   public bool isReady { get { return Time.time > lastAction; } }
+  protected int targetLayer;
 
   public virtual void Setup(GameObject casterGo, int targetLayerParam)
   {

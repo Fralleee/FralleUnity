@@ -48,6 +48,7 @@
     <Compile Include="Ability\AIAbility.cs" />
     <Compile Include="Attributes.cs" />
     <Compile Include="DamageController.cs" />
+    <Compile Include="Derived\Types\Editor\AbilityEditor.cs" />
     <Compile Include="Target.cs" />
     <Compile Include="Derived\Effects\DamageEffect.cs" />
     <Compile Include="Derived\Projectile.cs" />
