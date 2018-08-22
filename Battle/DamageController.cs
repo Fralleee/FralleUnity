@@ -21,7 +21,7 @@ public class DamageController : MonoBehaviour
   public void TakeDamage(float damage, GameObject attacker, string abilityName)
   {
     float actualDamage = damage * damageReduction;
-    Debug.Log(gameObject.name + " took " + actualDamage + " damage from " + attacker.name + "'s " + abilityName);
+    //Debug.Log(gameObject.name + " took " + actualDamage + " damage from " + attacker.name + "'s " + abilityName);
     Health -= actualDamage;
     if (Health <= 0) { Die(); }
   }
