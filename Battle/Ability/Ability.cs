@@ -8,6 +8,7 @@ public abstract class Ability : ScriptableObject
   [Header("Settings")]
   public int abilityRange = 2;
   public float cooldown = 2;
+  public float castTime = 1f;
   public List<AbilityEffect> effects = new List<AbilityEffect>();
   [Space(10)]
 

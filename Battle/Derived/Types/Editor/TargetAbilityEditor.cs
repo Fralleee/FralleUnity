@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [CustomEditor(typeof(TargetAbility), true)]
-public class TargetAbilityEditor : AbilityEditor
+public class TargetAbilityEditor : Editor
 {
   override public void OnInspectorGUI()
   {

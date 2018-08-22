@@ -17,7 +17,7 @@ public class DamageEffect : AbilityEffect
     {
       System.Random rnd = new System.Random();
       int amount = rnd.Next(minAmount, maxAmount);
-      damageController.TakeDamage(amount, ability.caster, ability.abilityName);
+      damageController.TakeDamage(amount, ability.caster, ability.name);
     }
     else Debug.LogWarning("Target is missing DamageController: " + target.name);
 
