@@ -46,7 +46,6 @@
     <Compile Include="Camera\FlyCam.cs" />
     <Compile Include="Camera\Camera Shake\ShakeTransform.cs" />
     <Compile Include="Camera\Camera Shake\ShakeTransformEventData.cs" />
-    <Compile Include="Camera\FacingCamera.cs" />
     <Compile Include="Camera\MatchEditorCamera.cs" />
     <Compile Include="Extensions\FloatExtensions.cs" />
     <Compile Include="Extensions\LinqExtensions.cs" />
