@@ -1,6 +1,8 @@
-﻿using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
+
+#if UNITY_EDITOR
+using UnityEditor;
 namespace Fralle
 {
   [CustomEditor(typeof(GameEvent))]
@@ -15,3 +17,4 @@ namespace Fralle
     }
   }
 }
+#endif

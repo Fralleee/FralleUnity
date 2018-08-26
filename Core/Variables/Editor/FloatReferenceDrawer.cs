@@ -1,5 +1,7 @@
-﻿using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
+
+#if UNITY_EDITOR
+using UnityEditor;
 
 [CustomPropertyDrawer(typeof(FloatReference))]
 public class FloatReferenceDrawer : PropertyDrawer
@@ -44,3 +46,5 @@ public class FloatReferenceDrawer : PropertyDrawer
     EditorGUI.EndProperty();
   }
 }
+
+#endif

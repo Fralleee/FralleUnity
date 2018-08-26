@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
+#if UNITY_EDITOR
+using UnityEditor;
 [CustomEditor(typeof(GameData))]
 public class GameDataEditor : Editor
 {
@@ -17,3 +16,5 @@ public class GameDataEditor : Editor
   }
 
 }
+
+#endif
