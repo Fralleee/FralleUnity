@@ -1,9 +1,20 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 [CreateAssetMenu(menuName = "Variables/Bool")]
 public class BoolVariable : ScriptableObject
 {
   public bool defaultValue;
-  public bool currentValue;
+  bool _currentValue;
+  public bool currentValue
+  {
+    get { return _currentValue; }
+    set
+    {
+      _currentValue = value;
+      OnChange(this);
+    }
+  }
+  public event Action<BoolVariable> OnChange = delegate { };
   void OnEnable() { currentValue = defaultValue; }
 }
