@@ -49,6 +49,8 @@
     <Compile Include="Extensions\LinqExtensions.cs" />
     <Compile Include="Extensions\TransformExtensions.cs" />
     <Compile Include="Extensions\Vector3Extensions.cs" />
+    <Compile Include="Input\Keybindings.cs" />
+    <Compile Include="Input\InputManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\AutoReferencer.cs" />
     <Compile Include="Utils\Colors.cs" />
